@@ -1,52 +1,11 @@
 {
   "stryker-config": {
     "solution": "StrykerApp.sln",
-    "coverage-analysis": "perTestInIsolation",
-    "disable-bail": false,
-    "disable-mix-mutants": false,
-    "verbosity": "info",
-    "additional-timeout": 3000,
-    "concurrency": 4,
-    "break-on-initial-test-failure": true,
+    "project": "StrykerApp.csproj",
     "thresholds": {
-      "break": 0,
-      "high": 80,
-      "low": 60
-    },
-    "reporters": [
-      "json",
-      "html",
-      "progress"
-    ],
-    "mutation-level": "Standard",
-    "ignore-mutations": [
-      "string",
-      "linq",
-      "checked"
-    ],
-    "mutate": [
-      "!**/Migrations/**/*",
-      "!**/Database/**/*",
-      "!**/DependencyInjection.cs",
-      "!**/Startup.cs",
-      "!**/Program.cs",
-      "!**/GlobalSuppressions.cs",
-      "!**/Examples/**/*",
-      "!**/StartupConfiguration/*",
-      "!**/ExceptionHandler.cs",
-      "!**/bin/**"
-    ],
-    "ignore-methods": [
-      "ToString",
-      "ConfigureAwait",
-      "*Exception.ctor",
-      "*.ctor",
-      "Console.Write*",
-      "Equals",
-      "AddJsonFile",
-      "*HashCode*",
-      "*Log*",
-      "Assert"
-    ]
+      "high": 95,
+      "low": 85,
+      "break": 80
+    }
   }
 }
